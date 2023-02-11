@@ -1,0 +1,130 @@
+.birth, .main, .choice, .final {
+	padding: 30px 30px 100px;
+	min-height: calc(100vh - 80px);
+	position: relative;
+}
+.option-img {
+	display: none;
+}
+.situation {
+	background: transparent;
+	transition: all 1s;
+}
+.situation.dark {
+	background: #272424;
+	transition: all 1s;
+}
+.situation.light {
+	background: #fff;
+	transition: all 1s; 
+}
+.birth h1, .main h1 {
+	font-family: Fortuna;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 52px;
+	text-align: center;
+	letter-spacing: 0.12em;
+	color: #fff;
+	padding-bottom: 20px;
+	position: relative;
+	z-index: 2;
+}
+.main h1 {
+	color: #000;
+}
+.p, .p p {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 34px;
+	letter-spacing: 0.01em;
+	color: #E1DDDD;
+	padding-bottom: 20px;
+	position: relative;
+	z-index: 2;
+}
+.main .p, .final .p,
+.main .p p, .final .p p {
+	color: #000;
+}
+.options-box {
+	padding: 20px 0;
+}
+.option {
+	background: #fff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 22px;
+	opacity: 0.8;
+	padding: 20px;
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 26px;
+	color: #000;
+	margin-top: 20px;
+	position: relative;
+}
+.option.active {
+	background: #fff;
+	opacity: 1;
+}
+img {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	max-height: 300px;
+}
+.next-button {
+	z-index: 2;
+}
+
+@media (min-width: 1200px) {
+	.main .p, .final .p {
+		max-width: 25%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.main .p, .final .p {
+		max-width: 45%;
+		float: left;
+	}
+	.main img, .final img {
+		max-width: 45%;
+		position: fixed;
+		top: calc(50% + 60px);
+    	right: 25%;
+		transform: translate(50%, -50%);
+		max-height: 400px;
+	}
+	.final img {
+		top: 50%;
+	}
+	.birth, .main, .choice, .final {
+	  padding: 30px 100px 100px;
+	  overflow: hidden;
+	}
+	.final {
+	  padding: 100px;
+	}
+	.birth h1, .main h1 {
+	   padding-bottom: 50px;
+	}
+	.options-box {
+		position: relative;
+	}
+	.options-box .option {
+		width: 45%;
+	}
+	.option-img {
+		display: block;
+		position: absolute;
+		top: 50%;
+    right: 25%;
+    max-width: 45%;
+		transform: translate(50%, -50%);
+	}
+	.option .next-button {
+		position: absolute;
+	}
+}

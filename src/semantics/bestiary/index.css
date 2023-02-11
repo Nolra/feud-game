@@ -1,0 +1,91 @@
+.bestiary {
+	background: #272424;
+	width: 100%;
+	min-height: 100vh;
+	overflow:hidden;
+	position: relative;
+	padding-bottom: 100px;
+}
+.bestiary:after {
+	background: url(../../images/feud.png) no-repeat top #272424;
+	background-size: cover;
+	width: 100%;
+	min-height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	content: "";
+	z-index: 1;
+}
+.bestiary h1 {
+	font-family: Fortuna;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 62px;
+	letter-spacing: 0.12em;
+	color: #fff;
+	text-align: center;
+	padding: 120px 0 40px;
+}
+.bestiary-container {
+  margin: 0 auto;
+  max-width: 780px;
+  padding: 0 10px;
+  position: relative;
+  z-index: 10;
+}
+.bestiary-head {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 20px auto 10px;
+}
+.bestiary-box h2 {
+	font-family: Fortuna;
+  color: #fff;
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+  padding-left: 70px;
+}
+.bestiary-box {
+	position: relative;
+}
+.bestiary-box .next-button {
+	left: 0;
+	right: auto;
+	bottom: auto;
+	top: 10px;
+  width: 60px;
+  height: 20px;
+}
+.bestiary-box p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px auto;
+}
+.bestiary-box p {
+	overflow: hidden;
+}
+.bestiary-box.false p {
+  max-height: 0;
+}
+.bestiary-box.true p {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.bestiary-desc {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+
+
+@media (min-width: 1200px){
+	.bestiary-box .next-button {
+	   transform: none;
+	}
+}

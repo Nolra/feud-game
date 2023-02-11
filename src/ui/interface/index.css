@@ -1,0 +1,101 @@
+.interface {
+  height: 80px;
+  padding: 0 30px;
+  background: transparent;
+  transition: all 1s;
+}
+.dark {
+  background: #272424;
+}
+.interface.dark {
+  background: #272424;
+  transition: all 1s;
+}
+.interface.light {
+  background: #fff;
+  transition: all 1s;
+}
+
+
+.center-white {
+	background: url("../../images/karma/center-white.svg") no-repeat center;
+}
+
+.left-white {
+	background: url("../../images/karma/left-white.svg") no-repeat center;
+}
+
+.right-white {
+	background: url("../../images/karma/right-white.svg") no-repeat center;
+}
+.karma {
+	width: 60px;
+	height: 80px;
+	background-size: contain;
+	float: right;
+	background-size: 50px;
+	cursor: pointer;
+}
+.inventory {
+	width: 60px;
+	height: 80px;
+	background: url("../../images/icons/inventory.svg") no-repeat center 20px;
+	background-size: 45px;
+	float: right;
+	cursor: pointer;
+}
+.settings {
+	width: 45px;
+	height: 80px;	
+	background: url("../../images/icons/settings.png") no-repeat center top 32px;
+	background-size: contain;
+	float: left;
+	cursor: pointer;
+}
+.light .center-white {
+	background: url("../../images/karma/center-dark.svg") no-repeat center;
+	background-size: 45px;
+	cursor: pointer;
+}
+
+.light .left-white {
+	background: url("../../images/karma/left-dark.svg") no-repeat center;
+	background-size: 45px;
+	cursor: pointer;
+}
+
+.light .right-white {
+	background: url("../../images/karma/right-dark.svg") no-repeat center;
+	background-size: 45px;
+	cursor: pointer;
+}
+.light .inventory {
+	background: url("../../images/icons/inventory.svg") no-repeat center top 20px;
+	background-size: 45px;
+	filter: invert(1);
+	cursor: pointer;
+}
+.light .settings {
+	background: url("../../images/icons/settings-light.png") no-repeat center top 32px;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.progress-bar {
+	position: fixed;
+	width: 100%;
+	height: 5px;
+	bottom: 0;
+	background: #BDBDBD;
+	border-radius: 17px;
+	z-index: 3;
+}
+.progress-ivent {
+	position: fixed;
+	width: 5%;
+	height: 5px;
+	bottom: 0;
+	background: #525151;
+	border-radius: 17px;
+	z-index: 4;
+}

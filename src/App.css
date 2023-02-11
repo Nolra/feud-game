@@ -1,0 +1,163 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, form, label, input, input:focus, li, ul, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+@font-face {
+ font-family: Fortuna;
+ src: url("./fonts/Fortuna.ttf")
+}
+
+@font-face {
+ font-family: Roboto;
+ src: url("./fonts/Roboto-Regular.ttf")
+}
+
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* common styles */
+.title {
+	font-family: Fortuna;
+	text-align: center;
+	font-weight: normal;
+}
+.title-a {
+  font-family: Fortuna;
+  text-align: center;
+  font-weight: normal;
+  font-size: 50px;
+  color:#fff;
+}
+.title-a span {
+  font-size: 100px;
+  display:block;
+}
+.button {
+	text-align: center;
+	border-radius: 50px;
+	color:#fff;
+	font-weight: bold;
+	font-size: 19px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+}
+.back-button {
+	background: url("./images/icons/arrow.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+	width: 78px;
+	height: 78px;
+	border: none;
+  transform: rotate(-90deg);
+  padding: 0;
+  display: block;
+  position: absolute;
+  right: calc(50% - 39px);
+  bottom: auto;
+  top: 15px;
+}
+
+.next-button {
+	background: url("./images/icons/arrow.svg") no-repeat center;
+  background-size: contain;
+	width: 100px;
+	height: 100px;
+	border: none;
+	padding:0;
+	display: block;
+	position: absolute;
+  bottom: 15px;
+  right: calc(50% - 50px);
+  cursor: pointer;
+}
+
+.back-button.light,
+.next-button.light  {
+  background: url("./images/icons/arrow-dark.svg") no-repeat center;
+  background-size: contain;
+}
+
+@media (min-width: 1200px) {
+  .next-button {
+    right: calc(50% - 39px);
+    transform: rotate(90deg);
+  }
+}
+
+:root {
+  --dotcolor:0, 0, 0;
+  --dot: radial-gradient(rgb(var(--dotcolor)) 67%, rgba(var(--dotcolor), 0) 68%);
+}
+
+.spinner-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  padding-top: 25vh;
+}
+
+.spinner {
+  position: relative;
+  width: 50vmin;
+  height: 50vmin;
+  filter: blur(1vmin) contrast(12);
+  margin: auto;
+}
+.spinner:before, .spinner:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  -webkit-animation: spin linear infinite;
+          animation: spin linear infinite;
+  mix-blend-mode: multiply;
+  border-radius: 100%;
+}
+.spinner:before {
+  background-image: var(--dot), var(--dot), var(--dot), var(--dot), var(--dot), var(--dot), var(--dot), var(--dot), var(--dot);
+  background-position: 50% 90%, 75.7115043875% 80.6417777248%, 89.3923101205% 56.9459271067%, 84.6410161514% 30%, 63.680805733% 12.4122951688%, 36.3191942716% 12.4122951992%, 15.3589841541% 30.0000016734%, 10.6077003589% 56.9459762611%, 24.2887189832% 80.6426935862%;
+  background-size: 10% 10%, 10% 10%, 10% 10%, 10% 10%, 10% 10%, 10% 10%, 10% 10%, 10% 10%, 10% 10%;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+.spinner:after {
+  background-image: var(--dot), var(--dot), var(--dot);
+  background-position: 50% 92.5%, 86.8060796608% 28.75%, 13.1939206638% 28.750001778%;
+  background-size: 15% 15%, 15% 15%, 15% 15%;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
